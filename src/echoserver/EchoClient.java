@@ -20,16 +20,13 @@ public class EchoClient {
             InputStream input = socket.getInputStream();
             OutputStream output = socket.getOutputStream();
 
-            InputStreamReader keyboard = new InputStreamReader(System.in);
-
-            int k = keyboard.read();
             int i;
-
+            int k = System.in.read();
             while (k != -1) {
                 output.write(k);
                 i = input.read();
                 System.out.print(i);
-                k = keyboard.read();
+                k = System.in.read();
             }
 
             socket.close();

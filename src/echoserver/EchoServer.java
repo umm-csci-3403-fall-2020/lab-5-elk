@@ -22,6 +22,9 @@ public class EchoServer {
                     output.write(i);
                     i = input.read();
                 }
+
+                output.flush();
+                client.close();
             }
 
         } catch (IOException ioe) {
