@@ -1,7 +1,7 @@
 #!/usr/bin/env bats
 
 setup() {
-  BATS_TMPDIR= `mktemp --directory`
+  BATS_TMPDIR=`mktemp --directory`
   cd test/sampleBin
   java echoserver.EchoServer &
   cd ../..
